@@ -95,7 +95,13 @@ class ShippingAddressForm extends Component<ShippingAddressFormProps & ConnectFo
             `customFields.${fieldName}` :
             fieldName;
 
+        if (addressFieldName ==='shippingAddress' && formFieldName === 'field_31') 
+        {
+            setFieldValue(`${addressFieldName}.${formFieldName}`, 'asdasdasdasdasdasdasd');
+        }
+
         setFieldValue(`${addressFieldName}.${formFieldName}`, fieldValue);
+
     };
 
     private handleChange: (fieldName: string, value: string) => void = (fieldName, value) => {

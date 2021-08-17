@@ -71,11 +71,14 @@ class AddressForm extends Component<AddressFormProps & WithLanguageProps> {
     });
 
     componentDidMount(): void {
+
         const { current } = this.containerRef;
 
         if (current) {
             this.nextElement = current.querySelector<HTMLElement>('[autocomplete="address-line2"]');
         }
+
+
     }
 
     render(): ReactNode {
@@ -191,6 +194,7 @@ class AddressForm extends Component<AddressFormProps & WithLanguageProps> {
 
         onChange(fieldName, value);
     };
+
 }
 
 export default withLanguage(AddressForm);
